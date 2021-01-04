@@ -1,0 +1,65 @@
+[database]
+dialect = mysql
+driver = pymysql
+user = root
+password =
+host = localhost
+port = 3306
+database_name = bond
+charset = utf8mb4
+;debug使用，echo=1 打印sql语句
+echo = 0
+; 数据库连接池的大小，现在让每个爬虫的进程隔离，没必要连接池设置太大
+pool_size = 5
+
+;数据库：db_notice_zj
+;用户名：notice_dbops
+;密码：zj1#Goodeday
+;IP地址：39.104.18.172
+;端口号：3306
+
+[spider_settings]
+; 文件存储目录
+files_store = /Users/wenyin/Desktop/data/
+;files_store = /projects/data
+;PDF文件存储路径formatter
+file_path_formatter = test_xiaobei/{board}/{publish_date}/
+; 爬取目标网站，多个网站可用英文逗号分割。（目前爬虫只支持 chinabond,chinamoney）
+boards = chinabond,chinamoney
+;爬虫日志的输出level，可选DEBUG,WARNING,ERROR,INFO等
+log_level = INFO
+;是否开启自带下载文件功能，1：开启，0：关闭
+download_file = 1
+; 元数据本地缓存的大小
+limited_size_dict = 20000
+
+;日志存储目录
+;log_path = /projects/logs/app/AnnouceExtractSys/chinabond_spider/logs/
+log_path = /Users/wenyin/Desktop/chinabond_spider/logs/
+; 日志rotate时间点
+log_rotate_time = S
+; 日志rotate时间间隔
+log_rotate_interval = 20
+; 日志保存份数
+log_backup_count = 200
+
+
+;---------------时间相关的参数---------------
+# 比对间隔时间：s
+stats_interval = 10
+
+
+;--------------headless chromium--------------
+; contos 安装 headless chromium 的 path
+headless_chromium_path =
+;headless_chromium_path = /usr/lib64/chromium-browser/headless_shell
+
+;--------------程序功能设置--------------
+# 是否启用数据量比对，1：启用；0：不启用
+monitor_ext = 1
+
+;--------------- 爬虫等待时间 -------------
+wait_time = 3600
+
+;-----------------爬虫并发量-------------------
+concurrent_requests = 1
