@@ -17,7 +17,7 @@ nest_asyncio.apply()
 
 
 class TouTiaoSpider(Spider):
-    name = 'toutiao'
+    # name = 'toutiao'
     allowed_domains = ['www.toutiao.com']
     start_urls = ['https://www.toutiao.com/c/user/token/MS4wLjABAAAAigrrKo-3rjLpxaH4Go3BrZRqHTIhLW3e30QjfFXgzNQ/']
 
@@ -31,8 +31,6 @@ class TouTiaoSpider(Spider):
         yield Request(self.start_urls[0], callback=self.parse)
 
     def parse(self, response, **kwargs):
-        print(222)
-        print(response.url)
         async def playweight_demo():
             async with async_playwright() as p:
                 width, height = 1366, 768

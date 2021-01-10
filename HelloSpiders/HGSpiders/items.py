@@ -3,7 +3,9 @@ import scrapy
 
 class HgspidersItem(scrapy.Item):
 
-    artical_id = scrapy.Field()
+    item_type = scrapy.Field()
+
+    article_id = scrapy.Field()
     article_link = scrapy.Field()
     title = scrapy.Field()
     is_original = scrapy.Field()
@@ -15,6 +17,8 @@ class HgspidersItem(scrapy.Item):
     tags = scrapy.Field()
     artical_ctime = scrapy.Field()
     artical_utime = scrapy.Field()
+    # 数据库没加
+    brief_content = scrapy.Field()
 
     source_name = scrapy.Field()
     blogger_name = scrapy.Field()

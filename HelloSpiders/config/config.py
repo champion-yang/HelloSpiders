@@ -30,7 +30,7 @@ if not service_config.has_option('spider_settings', 'log_path'):
 
 # 日志文件路径
 LOG_PATH = service_config.get('spider_settings', 'log_path')
-
+WAIT_TIME = service_config.get('spider_settings', 'wait_time')
 
 if __name__ == '__main__':
     print(LOG_PATH)

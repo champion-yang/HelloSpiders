@@ -62,9 +62,9 @@ ROBOTSTXT_OBEY = False
 
 # Configure item pipelines
 # See https://docs.scrapy.org/en/latest/topics/item-pipeline.html
-#ITEM_PIPELINES = {
-#    'HGSpiders.pipelines.HgspidersPipeline': 300,
-#}
+ITEM_PIPELINES = {
+   'HGSpiders.pipelines.JueJinPipeline': 300,
+}
 
 # Enable and configure the AutoThrottle extension (disabled by default)
 # See https://docs.scrapy.org/en/latest/topics/autothrottle.html
